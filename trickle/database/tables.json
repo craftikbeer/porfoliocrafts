@@ -1,0 +1,148 @@
+[
+  {
+    "name": "project",
+    "fields": [
+      {
+        "name": "title",
+        "type": "text",
+        "description": "Project title",
+        "options": null
+      },
+      {
+        "name": "cat",
+        "type": "text",
+        "description": "Project category",
+        "options": null
+      },
+      {
+        "name": "year",
+        "type": "text",
+        "description": "Project year",
+        "options": null
+      },
+      {
+        "name": "img",
+        "type": "text",
+        "description": "Primary project image URL",
+        "options": null
+      },
+      {
+        "name": "img_hover",
+        "type": "text",
+        "description": "Secondary image URL shown on hover",
+        "options": null
+      },
+      {
+        "name": "desc",
+        "type": "text",
+        "description": "Project description",
+        "options": null
+      },
+      {
+        "name": "tags",
+        "type": "array",
+        "description": "Project tags",
+        "options": null
+      },
+      {
+        "name": "challenge",
+        "type": "text",
+        "description": "Project challenge description",
+        "options": null
+      },
+      {
+        "name": "solution",
+        "type": "text",
+        "description": "Project solution description",
+        "options": null
+      },
+      {
+        "name": "video",
+        "type": "text",
+        "description": "Video URL (YouTube embed, Vimeo, or direct video link)",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "gallery_image",
+    "fields": [
+      {
+        "name": "title",
+        "type": "text",
+        "description": "Gallery image title",
+        "options": null
+      },
+      {
+        "name": "image",
+        "type": "text",
+        "description": "Image URL",
+        "options": null
+      },
+      {
+        "name": "category",
+        "type": "text",
+        "description": "Image category",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "transformation",
+    "fields": [
+      {
+        "name": "title",
+        "type": "text",
+        "description": "Transformation title",
+        "options": null
+      },
+      {
+        "name": "desc",
+        "type": "text",
+        "description": "Transformation description",
+        "options": null
+      },
+      {
+        "name": "before",
+        "type": "text",
+        "description": "Before image URL",
+        "options": null
+      },
+      {
+        "name": "after",
+        "type": "text",
+        "description": "After image URL",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "magnify_card",
+    "fields": [
+      {
+        "name": "title",
+        "type": "text",
+        "description": "Card title (use \\n for line break)",
+        "options": null
+      },
+      {
+        "name": "cat",
+        "type": "text",
+        "description": "Card category",
+        "options": null
+      },
+      {
+        "name": "color",
+        "type": "text",
+        "description": "Card accent color in HEX format",
+        "options": null
+      },
+      {
+        "name": "image",
+        "type": "text",
+        "description": "Card image URL (optional, if provided will show image instead of text)",
+        "options": null
+      }
+    ]
+  }
+]

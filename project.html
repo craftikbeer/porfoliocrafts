@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">NEUROCRAFTS — Project</title>
+    <meta name="description" id="page-description" content="View project details">
+    <meta property="og:title" id="og-title" content="NEUROCRAFTS — Project</title>
+    <meta property="og:description" id="og-description" content="View project details">
+    <meta property="og:image" id="og-image" content="">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="NEUROCRAFTS — Project">
+    <meta name="twitter:description" id="twitter-description" content="View project details">
+    <meta name="twitter:image" id="twitter-image" content="">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --pure-black: #000000;
+            --off-white: #fafafa;
+            --accent: #ff0000;
+        }
+    }
+    @layer base {
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--pure-black);
+            color: var(--off-white);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="data/projects.js"></script>
+    <script type="text/babel" src="project-app.js"></script>
+</body>
+</html>

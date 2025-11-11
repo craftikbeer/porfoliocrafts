@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SZYPVZD7E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7SZYPVZD7E');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUROCRAFTS — Creative AI Studio</title>
+    <meta name="description" content="Creative AI studio specializing in neural-powered design, web3, and immersive digital experiences. Available for freelance projects.">
+    <meta name="keywords" content="neurocrafts, AI studio, creative developer, web designer, react developer, frontend developer, web3, 2025">
+    <meta property="og:title" content="NEUROCRAFTS — Creative AI Studio">
+    <meta property="og:description" content="Creative AI studio available for freelance projects. Specializing in unique digital experiences.">
+    <meta name="twitter:title" content="NEUROCRAFTS — Creative AI Studio">
+    <meta name="twitter:description" content="Creative AI studio available for freelance projects">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NEUROCRAFTS",
+      "url": "https://neurocrafts.com",
+      "email": "craftsneuro@gmail.com",
+      "description": "Creative AI studio specializing in neural-powered design, web3, and immersive digital experiences",
+      "knowsAbout": ["Web Development", "React", "UI/UX Design", "Web3", "AI"],
+      "offers": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Web Development Services",
+          "description": "Custom web development and design services"
+        }
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://resource.trickle.so">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --pure-black: #000000;
+            --off-white: #fafafa;
+            --accent: #ff0000;
+        }
+    }
+
+    @layer base {
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--pure-black);
+            color: var(--off-white);
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                cursor: none;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .section-transition::before {
+                display: none !important;
+            }
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+        }
+    }
+
+    @layer components {
+        .section-transition {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-transition::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                transparent 0%,
+                var(--accent) 48%,
+                var(--accent) 52%,
+                transparent 100%
+            );
+            z-index: 10;
+            pointer-events: none;
+            transition: left 1.2s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        .section-transition.visible::before {
+            left: 100%;
+        }
+
+        .section-transition > * {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+        }
+
+        .section-transition.visible > * {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .project-image,
+        .gallery-image,
+        .marquee-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--off-white);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: transform 0.2s ease;
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .custom-cursor {
+                display: block;
+            }
+        }
+
+        .custom-cursor.hover {
+            transform: scale(2);
+            background: var(--off-white);
+        }
+
+
+
+        [data-magnify] {
+            position: relative;
+            transition: filter 0.3s ease;
+        }
+
+        [data-magnify].magnifying {
+            filter: blur(2px);
+        }
+
+        .magnifying-glass {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .magnifying-glass.active {
+            opacity: 1;
+        }
+
+        .magnifying-glass-lens {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--off-white);
+            box-shadow: 
+                0 0 0 2px rgba(0,0,0,0.5),
+                0 10px 40px rgba(0,0,0,0.8);
+            overflow: hidden;
+            position: relative;
+            background: var(--pure-black);
+        }
+
+        .magnifying-glass-lens canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-grid {
+            background-image: 
+                linear-gradient(rgba(250, 250, 250, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(250, 250, 250, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: center center;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: var(--off-white);
+            opacity: 0.1;
+        }
+
+        .hover-reveal {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hover-reveal::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        .hover-reveal:hover::after {
+            transform: scaleX(1);
+        }
+
+        .custom-cursor,
+        .magnifying-glass {
+            will-change: transform;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="data/projects.js"></script>
+    <script type="text/babel" src="data/gallery.js"></script>
+    <script type="text/babel" src="data/transformations.js"></script>
+    <script type="text/babel" src="data/magnify-cards.js"></script>
+    <script type="text/babel" src="data/blog.js"></script>
+    <script type="text/babel" src="utils/constants.js"></script>
+    <script type="text/babel" src="utils/hooks.js"></script>
+    <script type="text/babel" src="utils/errorHandler.js"></script>
+    <script type="text/babel" src="utils/translations.js"></script>
+    <script type="text/babel" src="utils/smoothScroll.js"></script>
+    <script type="text/babel" src="utils/imageOptimizer.js"></script>
+    <script type="text/babel" src="utils/shareUtils.js"></script>
+    <script type="text/babel" src="components/ScrollProgress.js"></script>
+    <script type="text/babel" src="components/BackToTop.js"></script>
+    <script type="text/babel" src="components/SectionTransition.js"></script>
+    <script type="text/babel" src="components/InteractiveGrid.js"></script>
+    <script type="text/babel" src="components/MagnifyingGlass.js"></script>
+    <script type="text/babel" src="components/Navigation.js"></script>
+    <script type="text/babel" src="components/VideoHero.js"></script>
+    <script type="text/babel" src="components/ManifestoSection.js"></script>
+    <script type="text/babel" src="components/ProjectModal.js"></script>
+    <script type="text/babel" src="components/WorkGrid.js"></script>
+    <script type="text/babel" src="components/ProjectsMarquee.js"></script>
+    <script type="text/babel" src="components/BeforeAfterSection.js"></script>
+    <script type="text/babel" src="components/BlogSection.js"></script>
+    <script type="text/babel" src="components/ContactSection.js"></script>
+    <script type="text/babel" src="components/TelegramCTA.js"></script>
+    <script type="text/babel" src="components/ExitIntentPopup.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
